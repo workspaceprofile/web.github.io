@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>點擊切換圖片</title>
+    <style>
+        .slideshow-container {
+            max-width: 400px;
+            position: relative;
+            margin: auto;
+        }
+
+        .slide-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 16px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .caption {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <div class="slide-container">
+        <div class="slide">
+            <img src="https://img.freepik.com/free-vector/hand-drawn-essay-illustration_23-2150268421.jpg?w=740&t=st=1698038299~exp=1698038899~hmac=17c561df8c9510646198869227ef8246a58652bf85056234fe31c7b11c126909 alt="圖片1">
+            <div class="caption">線上申辦</div>
+        </div>
+        <div class="slide">
+            <img src="https://img.freepik.com/free-vector/online-job-interview_23-2148612927.jpg?w=1380&t=st=1698038380~exp=1698038980~hmac=91fa72f70d1f8d827218e6d78d7f7df4351ec6c9118d4cccf08584f6e1da31f9" alt="圖片2">
+            <div class="caption">線上評估</div>
+        </div>
+        <div class="slide">
+            <img src="https://img.freepik.com/free-vector/people-making-money-from-referral-concept-illustration_52683-22927.jpg?w=1380&t=st=1698038482~exp=1698039082~hmac=c430c56d1e1b9273e59a907f6b3bb72794865fad42be8ee33d5b6a544747302c" alt="圖片3">
+            <div class="caption">撥款快速</div>
+        </div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script>
+    var slideIndex = 0;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        if (n >= slides.length) { slideIndex = 0; }
+        if (n < 0) { slideIndex = slides.length - 1; }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+    }
+</script>
+
+</body>
+</html>
