@@ -1,4 +1,3 @@
-
 .contain-01{
 background-color:#ffffff;
 border: 3px solid rgb(204, 204, 204);
@@ -8,6 +7,15 @@ width:850px;
 height:350px;
 }
 
+/* 行動版*/
+@media screen and (max-width: 768px) {
+    .contain-01 {
+        width: 80%; /* 在小屏幕上将宽度设置为100%以适应屏幕宽度 */
+        height: auto; /* 自动调整高度，以根据内容而变化 */
+    }
+}
+
+
 .rangeslide {
     display: flex;
     align-items: center;
@@ -16,11 +24,20 @@ height:350px;
     width: 100%;
 }
 
+/* 行動版 */
+@media (max-width: 768px) {
+    .rangeslide {
+        width: 80%; /* 修改宽度以适应小屏幕 */
+    }
+}
+
+
 p{
 font-size:16px;
 font-family:Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", 微软雅黑, メイリオ, "맑은 고딕", sans-serif ;
 color:#777777;   
 }
+
 
 h3{
 font-size: 22px;
@@ -29,10 +46,14 @@ font-family:Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷�
 
 }
 
+
+
 .contain-fixed-txt{
     border: 1px solid #ccc; /* 定義容器的邊框 */
             padding: 10px; /* 定義容器的內邊距 */
 }
+
+
 .fixed-text{
     position: fixed; /* 將元素設定為固定位置 */
     font-family: Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", 微软雅黑, メイリオ, "맑은 고딕", sans-serif;
@@ -43,7 +64,6 @@ font-family:Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷�
     height:20px;
 
 }
-
 
 .fixed-text2{
     position: fixed; /* 將元素設定為固定位置 */
@@ -59,7 +79,6 @@ font-family:Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷�
 }
 
 
-
 .custom-slider {
     -webkit-appearance: none; /* 移除默認樣式 */
     width: 600px!important; /* 設置寬度 */
@@ -68,6 +87,17 @@ font-family:Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷�
     border-radius: 5px; /* 圓角邊框 */
     outline: none; /* 移除點擊時的輪廓 */
 }
+
+/* 行動版 */
+@media (max-width: 768px) {
+    .custom-slider {
+        width: 80%; /* 修改宽度以适应小屏幕 */
+    }
+}
+
+
+
+
 
 /* 滑塊（拖動按鈕）的樣式 */
 .custom-slider::-webkit-slider-thumb {
@@ -83,11 +113,17 @@ font-family:Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷�
     cursor: pointer;
 }
 
+
+
+
 /* 調整滑塊的顏色在拖動時 */
 .custom-slider::-webkit-slider-thumb:hover {
     background-color: #0056b3; /* 滑塊的背景顏色 */
     background-image: url("https://png.pngtree.com/png-clipart/20220111/ourmid/pngtree-car-hand-drawing-material-picture-lovely-wind-small-fresh-car-png-image_4167246.png"); /* 将图片路径替换为你想要的图片 */
 }
+
+
+
 
 .loanresult {
     display: grid; /* 使用CSS Grid佈局 */
@@ -97,12 +133,15 @@ font-family:Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷�
    }
 
 
+
 .loantitles {
     padding: 10px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
    
 }
+
+
 
 output {
     font-size: 16px;
@@ -117,6 +156,8 @@ output {
     display: flex; /* 使用 flex 布局 */
     align-items: center; /* 垂直居中文本 */
     justify-content: center; /* 水平居中文本 */
+    position: -webkit-sticky; /* 将元素设定为粘性定位 */
+    position: sticky; /* 将元素设定为粘性定位 */
  
 
 }
@@ -124,6 +165,8 @@ output {
 output::before {
     content: "NT$ ";
 }
+
+
 
 
 .loanAmoun {
@@ -139,7 +182,12 @@ output::before {
     display: flex; /* 使用 flex 布局 */
     align-items: center; /* 垂直居中文本 */
     justify-content: center; /* 水平居中文本 */
+    position: -webkit-sticky; /* 将元素设定为粘性定位 */
+    position: sticky; /* 将元素设定为粘性定位 */
 }
+
+
+
 
 .month {
     /* 在这里添加你的样式 */
@@ -155,27 +203,49 @@ output::before {
     justify-content: center; /* 水平居中文本 */
     align-items: center; /* 垂直居中文本 */
     text-align: center; /* 文本水平居中 */
-    position: fixed; /* 將元素設定為固定位置 */
+    position: -webkit-sticky; /* 将元素设定为粘性定位 */
+    position: sticky; /* 将元素设定为粘性定位 */
+
    
 }
+
+
+
 
 .word100{
     font-family: Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", 微软雅黑, メイリオ, "맑은 고딕", sans-serif;
     width:50px;
     height:50px;
     margin: -170px 65px;
+    position: -webkit-sticky; /* 将元素设定为粘性定位 */
+    position: sticky; /* 将元素设定为粘性定位 */
 }
+
+
+
 
 .word350{
     font-family: Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", 微软雅黑, メイリオ, "맑은 고딕", sans-serif;
     width:50px;
     height:50px;
     margin:120px 750px;
+    position: -webkit-sticky; /* 将元素设定为粘性定位 */
+    position: sticky; /* 将元素设定为粘性定位 */
 
 }
+
+
 
 .money{
     font-family: Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", 微软雅黑, メイリオ, "맑은 고딕", sans-serif;
     font-size:16px;
     color:white
 }
+
+.memo{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+
