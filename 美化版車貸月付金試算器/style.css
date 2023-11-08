@@ -57,13 +57,8 @@ font-family:Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷�
         
 
 }
-.month{
-    position: fixed; /* 將元素設定為固定位置 */
-    font-family:Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", 微软雅黑, メイリオ, "맑은 고딕", sans-serif;
-    top: 100px; /* 設定距離畫面頂部的距離 */
-    right: 200px; /* 設定距離畫面右側的距離 */
-    padding: 200px;
-}
+
+
 
 .custom-slider {
     -webkit-appearance: none; /* 移除默認樣式 */
@@ -149,17 +144,18 @@ output::before {
 .month {
     /* 在这里添加你的样式 */
     font-size: 16px;
-    font-family: Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", 微软雅黑, メイリオ, "맑은 고딕", sans-serif;
+    font-family:Arial, 微軟正黑體, 文泉驛正黑, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", 微软雅黑, メイリオ, "맑은 고딕", sans-serif;
     color: black;
     border: 1px solid red; /* 添加1像素宽度的红色边框 */
     width:250px;
     height: 30px;
     padding: 0px; /* 可选：添加内边距以增加内容与边框的距离 */
-    margin: 151.5px 109px;
+    margin:0px -80px;
     display: flex; /* 使用 flex 布局 */
     justify-content: center; /* 水平居中文本 */
     align-items: center; /* 垂直居中文本 */
     text-align: center; /* 文本水平居中 */
+    position: fixed; /* 將元素設定為固定位置 */
    
 }
 
