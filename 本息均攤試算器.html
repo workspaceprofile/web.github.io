@@ -7,18 +7,18 @@
     </title>
 </head>
 <body>
-    <h1>本息均攤試算器</h1>
+    <h3>車貸試算機</h3>
 
     <label for="loanAmount">你的額度:</label>
     <input type="number" id="loanAmount" step="any" placeholder="輸入你的貸款金額" required>
-
+<br/>
     <label for="interestRate">你的利率 (%):</label>
     <input type="number" id="interestRate" step="any" placeholder="輸入你的貸款利率" required>
-
+<br/>
     <label for="loanTerm">你的期數(月數):</label>
     <input type="number" id="loanTerm" step="1" placeholder="輸入你的貸款期數" required>
-
-    <button onclick="calculateAmortization()">Calculate</button>
+<br/>
+    <button onclick="calculateAmortization()">一鍵試算</button>
 
     <h2>Amortization Schedule</h2>
     <table border="1">
@@ -26,7 +26,7 @@
             <th>期數</th>
             <th>攤還本金</th>
             <th>攤還利息</th>
-            <th>總共攤還之本利合</th>
+            <th>月付金</th>
             <th>剩餘本金</th>
         </tr>
         <tbody id="amortizationTableBody"></tbody>
