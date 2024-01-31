@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://sinyou.com.tw/">
+    <script>
+      // 允許的白名單域名
+      const allowedDomains = ['https://sinyou.com.tw/'];
+  
+      // 檢查是否允許被嵌入
+      function isAllowedDomain(url) {
+        return allowedDomains.some(domain => url.startsWith(domain));
+      }
+  
+      const referrer = document.referrer;
+  
+      if (window !== window.top && !isAllowedDomain(referrer)) {
+        // 如果不在白名單內，則重新導向或顯示錯誤訊息等
+        // 這裡我們直接重新導向回首頁
+        window.location.href = "https://www.example.com/";
+      }
+    </script>
+  <title>車貸利率回推</title>
+</head>
+<body>
+  <h3>車貸利率回推</h3>
+  <form id="loanCalculatorForm">
+    <label for="loanAmount">貸款總額：</label>
+    <input type="number" id="loanAmount" required>
+    <br/>
+    <br/>
+    <label for="loanTerm">還款期數：</label>
+    <input type="number" id="loanTerm" required>
+    <br/>
+    <br/>
+    <label for="monthlyPayment">月付金：&nbsp; &nbsp;&nbsp;</label>
+    <input type="number" id="monthlyPayment" required>
+    <br/>
+    <br/>
+    <input type="button" value="試算" onclick="calculateInterestRate()">
+  </form>
+
+  <p id="result">您的利率是：</p>
+
+<script src="rate-secreat.js"></script>
+</body>
+</html>
